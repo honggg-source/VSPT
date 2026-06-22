@@ -4,9 +4,10 @@
 ## Abstract
 We propose a new FFT-based TIR tracking framework based on visual and semantic priors, termed VSPT. Specifically, this framework consists of three main components: a pre-trained ViT-based tracker, a visual prior branch, and a semantic prior branch. Given that visual features such as multi-scale and shape are crucial for TIR tracking tasks, we first propose a visual prior module employing a dynamic multi-scale CNN architecture to model this prior information. Second, considering the challenges faced by TIR tracking, like target deformation, occlusion, and background distractors, we propose a semantic prior module based on a pre-trained MAE-based infrared large model.  This branch captures semantic information in TIR images through a dynamic masking mechanism. Third, we design a feature injector and a dynamic feature extractor based on the cross-attention mechanism. The feature injector integrates these priors into each Transformer block of ViT via dynamic residual connections, while the feature extractor simulates multiple levels of prior features injected into the prior branches.
 
-<p align="center">
-  <img width="85%" src="https://github.com/hongg-source/VSPT/blob/main/assets/adapter%2mae.png" alt="Framework"/>
-</p>
+
+<div align='center'>
+<img src="./assets/adapter+mae.png" width=70%>
+</div>
 
 ## Download
 - You can download several our trained model from [Baidu Pan](https://pan.baidu.com/s/1czaAeie5iD8hvXjJV401Pw).
