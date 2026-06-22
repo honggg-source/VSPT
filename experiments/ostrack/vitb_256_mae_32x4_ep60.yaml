@@ -1,0 +1,83 @@
+DATA:
+  MAX_SAMPLE_INTERVAL: 200
+  MEAN:
+  - 0.485
+  - 0.456
+  - 0.406
+#   - 0.449
+#   - 0.449
+#   - 0.449
+  SEARCH:
+    CENTER_JITTER: 3
+    FACTOR: 4.0
+    SCALE_JITTER: 0.25
+    SIZE: 256
+    NUMBER: 1
+  STD:
+  - 0.229
+  - 0.224
+  - 0.225
+#  - 0.226
+#  - 0.226
+#  - 0.226
+  TEMPLATE:
+    CENTER_JITTER: 0
+    FACTOR: 2.0
+    SCALE_JITTER: 0
+    SIZE: 128
+
+  TRAIN:
+    DATASETS_NAME:
+    - LSOTB
+    DATASETS_RATIO:
+    - 1
+    SAMPLE_PER_EPOCH: 60000
+#  VAL:
+#    DATASETS_NAME:
+#    -
+#    DATASETS_RATIO:
+#    - 1
+#    SAMPLE_PER_EPOCH: 10000
+# /home/sch/OSTrack-Adapter/pretrain_models/InfMAE.pth
+# /home/sch/OSTrack-Adapter/lib/models/ostrack/pretrained_models/OSTrack_ep0300.pth.tar
+MODEL:
+  PRETRAIN_FILE: "/root/autodl-fs/OSTrack_ep0300.pth.tar"
+  PRETRAIN_FILE_MAE: "/root/autodl-fs/InfMAE.pth"
+  EXTRA_MERGER: False
+  RETURN_INTER: False
+  BACKBONE:
+    TYPE: vit_base_patch16_224_peft
+    STRIDE: 16
+  HEAD:
+    TYPE: CENTER
+    NUM_CHANNELS: 256
+TRAIN:
+  BACKBONE_MULTIPLIER: 0.1
+  DROP_PATH_RATE: 0.1
+  BATCH_SIZE: 16
+  EPOCH: 10
+  GIOU_WEIGHT: 2.0
+  L1_WEIGHT: 5.0
+  GRAD_CLIP_NORM: 0.1
+  LR: 0.0001 #0.0001
+  LR_DROP_EPOCH: 10
+  NUM_WORKER: 10
+  OPTIMIZER: ADAMW
+  PRINT_INTERVAL: 1
+  SCHEDULER:
+    TYPE: step
+    DECAY_RATE: 0.1
+  VAL_EPOCH_INTERVAL: 100
+  WEIGHT_DECAY: 0.0001 #0.0001
+  AMP: False #False
+  PROMPT:
+    TYPE: all #Adapter all Mona
+  FIX_BN: true
+  SAVE_EPOCH_INTERVAL: 5
+  SAVE_LAST_N_EPOCH: 1
+TEST:
+  EPOCH: 2
+  SEARCH_FACTOR: 4.0
+  SEARCH_SIZE: 256
+  TEMPLATE_FACTOR: 2.0
+  TEMPLATE_SIZE: 128

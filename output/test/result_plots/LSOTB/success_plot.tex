@@ -1,0 +1,72 @@
+% This file was created with tikzplotlib v0.10.1.
+\begin{tikzpicture}
+
+\definecolor{darkgray176}{RGB}{176,176,176}
+
+\begin{axis}[
+legend cell align={left},
+legend style={fill opacity=1.0, draw opacity=1, text opacity=1, at={(0.03,0.03)}, anchor=south west},
+tick align=outside,
+tick pos=left,
+title={\(\displaystyle \bf{Success}\)},
+x grid style={darkgray176},
+xlabel={Overlap threshold},
+xmajorgrids,
+xmin=0, xmax=1,
+xtick style={color=black},
+xtick={0,0.2,0.4,0.6,0.8,1},
+xticklabels={
+  \(\displaystyle {0.0}\),
+  \(\displaystyle {0.2}\),
+  \(\displaystyle {0.4}\),
+  \(\displaystyle {0.6}\),
+  \(\displaystyle {0.8}\),
+  \(\displaystyle {1.0}\)
+},
+y grid style={darkgray176},
+ylabel={Overlap Precision [\%]},
+ymajorgrids,
+ymin=0, ymax=88,
+ytick style={color=black},
+ytick={0,10,20,30,40,50,60,70,80,90},
+yticklabels={
+  \(\displaystyle {0}\),
+  \(\displaystyle {10}\),
+  \(\displaystyle {20}\),
+  \(\displaystyle {30}\),
+  \(\displaystyle {40}\),
+  \(\displaystyle {50}\),
+  \(\displaystyle {60}\),
+  \(\displaystyle {70}\),
+  \(\displaystyle {80}\),
+  \(\displaystyle {90}\)
+}
+]
+\addplot [thick, red]
+table {%
+0 89.7515563964844
+0.0500000007450581 88.1987762451172
+0.100000001490116 87.4788055419922
+0.150000005960464 86.9849243164062
+0.200000002980232 86.2651062011719
+0.25 85.8445663452148
+0.300000011920929 85.5348205566406
+0.349999994039536 85.2742004394531
+0.400000005960464 84.9592590332031
+0.449999988079071 84.5614471435547
+0.5 84.0731887817383
+0.550000011920929 83.3632202148438
+0.600000023841858 82.5477600097656
+0.649999976158142 81.1042785644531
+0.699999988079071 78.6792449951172
+0.75 74.7126922607422
+0.800000011920929 67.0086517333984
+0.850000023841858 52.6847229003906
+0.899999976158142 29.2366809844971
+0.949999988079071 5.39188575744629
+1 0
+};
+\addlegendentry{\textbf{OSTrack256 [71.6]}}
+\end{axis}
+
+\end{tikzpicture}
