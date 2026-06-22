@@ -6,7 +6,7 @@ We propose a new FFT-based TIR tracking framework based on visual and semantic p
 
 
 <div align='center'>
-<img src="./assets/adapter+mae.png" width=70%>
+<img src="./assets/adapter+mae.png" width=90%>
 </div>
 
 ## Download
