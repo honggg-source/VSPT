@@ -44,20 +44,6 @@ lib/train/admin/local.py  # paths about training
 lib/test/evaluation/local.py  # paths about testing
 ```
 
-## Data Preparation
-Put the tracking datasets in ./data. It should look like this:
-   ```
-   ${PROJECT_ROOT}
-    -- data
-        -- lsotb
-            |-- test
-            |-- train
-        -- ptbtir
-            |-- test
-        -- lashertir
-            |-- test
-   ```
-
 
 ## Training
 - Download pre-trained [OSTrack weights](https://github.com/botaoye/OSTrack) and [InfMAE weights](https://github.com/liufangcen/InfMAE) and put it under `$PROJECT_ROOT$/pretrained_models` .
