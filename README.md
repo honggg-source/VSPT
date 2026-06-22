@@ -10,8 +10,8 @@ We propose a new FFT-based TIR tracking framework based on visual and semantic p
 </div>
 
 ## Download
-- You can download several our trained model from [Baidu Pan](https://pan.baidu.com/s/1czaAeie5iD8hvXjJV401Pw).
-- You can download the tracking raw results of three benchmarks from [Baidu Pan](https://pan.baidu.com/s/1knmuUTv72cLwhy40eUOMlA).
+- You can download several our trained model from [Baidu Pan](https://pan.baidu.com/s/1-FL5-yFgJvSFBLAzlmj-NQ?pwd=i99t).
+- You can download the tracking raw results of three benchmarks from [Baidu Pan](https://pan.baidu.com/s/1k4ia1iEW4kixdNGW3HOetQ?pwd=ah4e).
 
 
 
